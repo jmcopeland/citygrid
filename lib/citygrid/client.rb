@@ -3,7 +3,7 @@ module Citygrid
   class Client
     include HTTParty
     base_uri "http://api.citygridmedia.com/content/places/v2"
-    format :xml
+    format :json
     
     attr_reader :api_key
                 
@@ -38,7 +38,7 @@ module Citygrid
     protected
     
     def default_options
-      {:api_key => @api_key, :publisher => "acme"}
+      {:api_key => @api_key, :publisher => 'acme', :format => 'json'}
     end
     
     def mashup(response)
