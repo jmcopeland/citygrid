@@ -5,10 +5,10 @@ module Citygrid
     base_uri "http://api.citygridmedia.com/content/"
     format :json
     
-    attr_reader :api_key
+    attr_reader :publisher
                 
     def initialize(options={})
-      @api_key = options[:api_key] || Citygrid.api_key
+      @publisher = options[:publisher] || Citygrid.publisher
     end
     
     #    http://docs.citygridmedia.com/display/citygridv2/Places+API
@@ -32,7 +32,7 @@ module Citygrid
     protected
     
     def default_options
-      {:api_key => @api_key, :publisher => 'acme', :format => 'json'}
+      {:publisher => @publisher, :format => 'json'}
     end
     
     def mashup(response)
