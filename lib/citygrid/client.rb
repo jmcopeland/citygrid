@@ -27,7 +27,7 @@ module Citygrid
         
     #    http://docs.citygridmedia.com/display/citygridv2/Reviews+API
     def reviews(options={})
-      mashup(self.class.get("reviews/v2/search/where/", :query => options.merge(self.default_options)))
+      mashup(self.class.get("reviews/v2/search/where", :query => options.merge(self.default_options)))
     end
     
     protected
