@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Johnny Khai Nguyen"]
+  s.authors = ["Johnny Khai Nguyen, Justin Copeland"]
   s.date = %q{2010-06-27}
-  s.description = %q{Ruby wrapper for the CityGrid API}
+  s.description = %q{Ruby wrapper for the CityGrid API v2}
   s.email = %q{johnnyn@gmail.com}
   s.extra_rdoc_files = [
     "README.md"
@@ -30,14 +30,14 @@ Gem::Specification.new do |s|
      "test/helper.rb",
      "uninstall.rb"
   ]
-  s.homepage = %q{http://github.com/phuphighter/citygrid}
+  s.homepage = %q{http://github.com/jmcopeland/citygrid}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.6}
-  s.summary = %q{Ruby wrapper for the CityGrid API}
+  s.summary = %q{Ruby wrapper for the CityGrid API v2}
   s.test_files = [
     "test/citygrid_test.rb",
-     "test/test_helper.rb"
+     "test/helper.rb"
   ]
 
   if s.respond_to? :specification_version then
