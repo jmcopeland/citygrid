@@ -3,7 +3,8 @@ module Citygrid
   class Client
     include HTTParty
     base_uri "http://api.citygridmedia.com/content/"
-    format :xml
+    default_params :format => 'json'
+    format :json
     
     attr_reader :publisher
                 
@@ -20,7 +21,7 @@ module Citygrid
       mashup(self.class.get("places/v2/search/latlon", :query => options.merge(self.default_options)))
     end
 
-    def detail(options={})
+    def details(options={})
       mashup(self.class.get("places/v2/detail", :query => options.merge(self.default_options)))
     end
         
@@ -32,7 +33,7 @@ module Citygrid
     protected
     
     def default_options
-      {:publisher => @publisher, :format => 'json'}
+      {:publisher => @publisher}
     end
     
     def mashup(response)
@@ -43,7 +44,7 @@ module Citygrid
           Hashie::Mash.new(response)
         else
          if response.first.is_a?(Hash)
-           response.map{|item| Hashie::Mash.new(item)}
+           response.map{ |item| Hashie::Mash.new(item) }
          else
            response
          end
