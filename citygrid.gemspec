@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{citygrid}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Johnny Khai Nguyen"]
@@ -25,10 +25,9 @@ Gem::Specification.new do |s|
      "install.rb",
      "lib/citygrid.rb",
      "lib/citygrid/client.rb",
-     "pkg/citygrid-0.1.0.gem",
      "tasks/citygrid_tasks.rake",
      "test/citygrid_test.rb",
-     "test/test_helper.rb",
+     "test/helper.rb",
      "uninstall.rb"
   ]
   s.homepage = %q{http://github.com/phuphighter/citygrid}
