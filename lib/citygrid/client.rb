@@ -3,7 +3,7 @@ module Citygrid
   class Client
     include HTTParty
     base_uri "http://api.citygridmedia.com/content/"
-    format :json
+    format :xml
     
     attr_reader :publisher
                 
