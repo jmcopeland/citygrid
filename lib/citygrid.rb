@@ -13,17 +13,17 @@ module Citygrid
   # create config/initializers/citygrid.rb
   # 
   # Citygrid.configure do |config|
-  #   config.api_key = 'api_key'
+  #   config.publisher = 'publisher code'
   # end
   # client = Citygrid::Client.new
   #
   # or
   #
-  # Citygrid.api_key = 'api_key'
+  # Citygrid.publisher = 'publisher code'
   #
   # or
   #
-  # Citygrid::Client.new(:api_key => 'api_key')
+  # Citygrid::Client.new(:publisher => 'publisher code')
   
   def self.configure
     yield self
